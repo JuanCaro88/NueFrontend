@@ -1,0 +1,27 @@
+<h2 class="mt-4">Todos los paises registrados en la db</h2>
+<div class="col-12 mb-3" style="text-align: right;">
+  <button type="button" class="btn btn-success">Crear pais</button>
+</div>
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Población</th>      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of countries">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name_countries }}</td>      
+        <td>{{ item.city }}</td>
+        <td>{{ item.state }}</td>
+        <td>{{ item.population }}</td>
+        <td><i class="fas fa-trash-alt"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
